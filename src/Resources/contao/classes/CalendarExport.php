@@ -12,8 +12,8 @@
 
 namespace Contao;
 
-use kigkonsult\iCalcreator\vcalendar;
-use kigkonsult\iCalcreator\vevent;
+use Kigkonsult\Icalcreator\Vcalendar;
+use Kigkonsult\Icalcreator\Vevent;
 
 class CalendarExport extends \Backend
 {
@@ -164,7 +164,7 @@ class CalendarExport extends \Backend
             }
 
             while ($objEvents->next()) {
-                $vevent = new vevent();
+                $vevent = new Vevent();
 
                 if ($objEvents->addTime) {
                     $vevent->setProperty('dtstart', array(
