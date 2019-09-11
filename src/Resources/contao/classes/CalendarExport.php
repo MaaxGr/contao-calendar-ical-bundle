@@ -133,7 +133,7 @@ class CalendarExport extends \Backend
             return array();
         }
 
-        $ical = new vcalendar();
+        $ical = new Vcalendar();
         $ical->setConfig('ical_' . $this->id, 'aurealis.de');
         $ical->setProperty('method', 'PUBLISH');
         $ical->setProperty("x-wr-calname", $title);
